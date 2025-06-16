@@ -1,0 +1,93 @@
+body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 { margin-bottom: 0.5rem; }
+
+    #setup, #gameContainer {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    #setup input, #setup button {
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+    }
+
+    #playersForm input {
+      display: block;
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(5, 100px);
+      grid-gap: 10px;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+
+    .tile {
+      background-color: #444;
+      color: #fff;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      transition: transform 0.2s;
+    }
+
+    .tile:hover { transform: scale(1.05); }
+
+    .used {
+      background-color: #999 !important;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    #questionModal {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.75);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #modalContent {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .answer-btn {
+      background-color: #eee;
+      padding: 0.5rem 1rem;
+      border: none;
+      margin: 0.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .answer-btn:hover { background-color: #ccc; }
+
+    #scoreboard { margin-top: 1rem; }
+
+    .current-turn {
+      font-weight: bold;
+      color: #007acc;
+    }
