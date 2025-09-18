@@ -27,7 +27,7 @@ const questions = [
         options: ["Rojo", "Violeta", "Azul", "Verde"],
         answer: "Violeta"
       }
-      // Agrega más preguntas aquí
+
     ];
 
     let players = [];
@@ -164,4 +164,5 @@ function startTimer() {
 function closeModal() {
   clearInterval(timerInterval);
   document.getElementById("questionModal").style.display = "none";
+
 }
